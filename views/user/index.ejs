@@ -1,361 +1,364 @@
 <%- include('partials/header') %>
-    <div class="full-section overflow-x-hidden left-0 right-0 w-full relative">
 
-        <section id="stats" class="bg-yellow-400 py-8 text-gray-900 animated-section">
-            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                <div class="p-6 fade-in slide-in-up">
-                    <div class="text-4xl md:text-6xl font-bold mb-4" id="kids-count">0</div>
-                    <p class="text-xl md:text-2xl font-semibold">Kids Helped Worldwide</p>
+
+    <section id="stats" class="bg-yellow-400 py-8 text-gray-900 animated-section">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="p-6 fade-in slide-in-up">
+                <div class="text-4xl md:text-6xl font-bold mb-4" id="kids-count">0</div>
+                <p class="text-xl md:text-2xl font-semibold">Kids Helped Worldwide</p>
+            </div>
+            <div class="p-6 fade-in slide-in-up">
+                <div class="text-4xl md:text-6xl font-bold mb-4" id="scholarships-count">0</div>
+                <p class="text-xl md:text-2xl font-semibold">Scholarships Given</p>
+            </div>
+            <div class="p-6 fade-in slide-in-up">
+                <div class="text-6xl font-bold mb-4 ">
+                    <img src="img/donate.jpeg" class="w-20 h-20 rounded-full mx-auto" alt="">
+                    <p class="text-xl md:text-2xl font-semibold mt-2">Save Children</p>
                 </div>
-                <div class="p-6 fade-in slide-in-up">
-                    <div class="text-4xl md:text-6xl font-bold mb-4" id="scholarships-count">0</div>
-                    <p class="text-xl md:text-2xl font-semibold">Scholarships Given</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="progress" class="py-20 bg-gray-50 bg-opacity-50 animated-section">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold">WE'VE REACHED SO FAR</h2>
+            </div>
+
+            <div class="mb-12 slide-in-up">
+                <div class="flex justify-between items-center text-gray-800 mb-2">
+                    <span class="text-lg font-semibold">$<span id="current-raised">0</span> Raised</span>
+                    <span class="text-lg font-semibold"><span id="days-left">38</span> Days Left</span>
+                    <span class="text-lg font-semibold">Goal: $<span id="goal-amount">55,000</span></span>
                 </div>
-                <div class="p-6 fade-in slide-in-up">
-                    <div class="text-6xl font-bold mb-4 ">
-                        <img src="img/donate.jpeg" class="w-20 h-20 rounded-full mx-auto" alt="">
-                        <p class="text-xl md:text-2xl font-semibold mt-2">Save Children</p>
+
+                <p class="text-sm text-gray-700 bg-white p-2 italic mb-2">
+                    Every dollar helps us support children affected by war — in Ukraine and around the world.
+                </p>
+
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: 0;"></div>
+                </div>
+
+                <div class="text-right text-sm text-gray-700 mt-2"><span id="percentage-raised">0</span>%</div>
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center mb-12 animated-section">
+                <div class="bg-white p-8 rounded-lg shadow-lg slide-in-up">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Total Raised in 2025 (So Far)</h3>
+                    <div class="text-xl md:text-5xl font-bold text-yellow-500 mb-4">$<span id="raised-2025">0</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg slide-in-up">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Total Raised in 2023</h3>
+                    <div class="text-xl md:text-5xl font-bold text-yellow-500 mb-4">$<span id="raised-2024">0</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg slide-in-up">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Total Raised in 2022</h3>
+                    <div class="text-xl md:text-5xl font-bold text-yellow-500 mb-4">$<span id="raised-2023">0</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg slide-in-up">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Total Raised in 2024</h3>
+                    <div class="text-xl md:text-5xl font-bold text-yellow-500 mb-4">$<span id="raised-2022">0</span>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="progress" class="py-20 bg-gray-50 bg-opacity-50 animated-section">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <div class="text-center mb-12 fade-in">
-                    <h2 class="text-4xl font-bold">WE'VE REACHED SO FAR</h2>
-                </div>
-
-                <div class="mb-12 slide-in-up">
-                    <div class="flex justify-between items-center text-gray-800 mb-2">
-                        <span class="text-lg font-semibold">$<span id="current-raised">0</span> Raised</span>
-                        <span class="text-lg font-semibold"><span id="days-left">38</span> Days Left</span>
-                        <span class="text-lg font-semibold">Goal: $<span id="goal-amount">55,000</span></span>
+            <div class="text-center mb-12 fade-in">
+                <h3 class="text-3xl font-bold mb-8">LATEST DONATIONS</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="flex flex-col items-center p-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jack Daniels"
+                            class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-yellow-400">
+                        <p
+                            class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl">
+                            Jack Daniels</p>
+                        <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $5,200
+                        </div>
                     </div>
+                    <div class="flex flex-col items-center p-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Heather Church"
+                            class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-yellow-400">
+                        <p
+                            class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl">
+                            Heather Church</p>
+                        <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $400
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center p-4">
+                        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Benjamin Jenner"
+                            class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-yellow-400">
+                        <p
+                            class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl ">
+                            Benjamin Jenner</p>
+                        <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $300
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center p-4">
+                        <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Vitalis Fisher"
+                            class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-yellow-400">
+                        <p
+                            class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl">
+                            Vitalis Fisher</p>
+                        <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $1,400
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center p-4">
+                        <div
+                            class="w-24 h-24 rounded-full mb-4 bg-gray-300 flex items-center justify-center text-gray-500 border-4 border-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.121 17.804A7.498 7.498 0 0112 15a7.498 7.498 0 016.879 2.804M12 12a3 3 0 100-6 3 3 0 000 6z" />
+                            </svg>
+                        </div>
+                        <p
+                            class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl">
+                            Anonymous</p>
+                        <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $1,000
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <p class="text-sm text-gray-700 bg-white p-2 italic mb-2">
-                        Every dollar helps us support children affected by war — in Ukraine and around the world.
+    <section id="help" class="bg-yellow-400 py-20 text-gray-900 animated-section">
+        <div class="container mx-auto md:px-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="slide-in-up ">
+                <h2 class="text-4xl font-bold mb-8 px-4">HOW CAN YOU HELP?</h2>
+                <div class="bg-gray-900 text-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">HELP FOR CAUSE</h3>
+                    <p class="text-lg md:text-xl mb-10 text-gray-600">
+                        Every action — big or small — brings us closer to a world where children no longer suffer
+                        from
+                        the horrors of war. Your support can change a life.
                     </p>
 
-                    <div class="progress-bar-container">
-                        <div class="progress-bar-fill" style="width: 0;"></div>
-                    </div>
+                    <div class="grid md:grid-cols-3 gap-8 text-left">
+                        <!-- Donate -->
+                        <div class="bg-gray-100 p-4 md:p-2 rounded-lg shadow hover:shadow-md transition">
+                            <h3 class="text-2xl font-semibold mb-2 text-yellow-600">Make a Donation</h3>
+                            <p class="text-gray-800">Your financial support provides emergency food, shelter,
+                                education,
+                                and psychological
+                                care to children in war zones.</p>
+                        </div>
 
-                    <div class="text-right text-sm text-gray-700 mt-2"><span id="percentage-raised">0</span>%</div>
-                </div>
+                        <!-- Volunteer -->
+                        <div class="bg-gray-100 p-4 md:p-2 rounded-lg shadow hover:shadow-md transition">
+                            <h3 class="text-2xl font-semibold mb-2 text-blue-600">Become a Volunteer</h3>
+                            <p class="text-gray-800">Whether online or on-ground, volunteers are the heart of our
+                                mission — helping raise
+                                awareness, organize events, or support logistics.</p>
+                        </div>
 
+                        <!-- Fundraise -->
+                        <div class="bg-gray-100 p-4 md:p-2 rounded-lg shadow hover:shadow-md transition">
+                            <h3 class="text-2xl font-semibold mb-2 text-green-600">Start a Fundraiser</h3>
+                            <p class="text-gray-800">Host a charity event, online campaign, or social media
+                                challenge to
+                                raise funds and
+                                awareness for children in crisis.</p>
+                        </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center mb-12 animated-section">
-                    <div class="bg-white p-8 rounded-lg shadow-lg slide-in-up">
-                        <h3 class="text-xl md:text-2xl font-bold mb-4">Total Raised in 2025 (So Far)</h3>
-                        <div class="text-xl md:text-5xl font-bold text-yellow-500 mb-4">$<span
-                                id="raised-2025">0</span>
-                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg slide-in-up">
-                        <h3 class="text-xl md:text-2xl font-bold mb-4">Total Raised in 2023</h3>
-                        <div class="text-xl md:text-5xl font-bold text-yellow-500 mb-4">$<span
-                                id="raised-2024">0</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-10 text-center">
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                            <span class="font-semibold">MEDIA</span>
                         </div>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg slide-in-up">
-                        <h3 class="text-xl md:text-2xl font-bold mb-4">Total Raised in 2022</h3>
-                        <div class="text-xl md:text-5xl font-bold text-yellow-500 mb-4">$<span
-                                id="raised-2023">0</span>
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 20h5v-3m-1.5-11L12 10.5M5 20h5v-3M7.5 13.5l1.5-1.5m3-3L15 6l1.5 1.5M12 17a4 4 0 100-8 4 4 0 000 8z" />
+                            </svg>
+                            <span class="font-semibold">MOBILIZATION</span>
                         </div>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg slide-in-up">
-                        <h3 class="text-xl md:text-2xl font-bold mb-4">Total Raised in 2024</h3>
-                        <div class="text-xl md:text-5xl font-bold text-yellow-500 mb-4">$<span
-                                id="raised-2022">0</span>
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m5.618-4.013A.995.995 0 0121 12a9 9 0 11-18 0c0-.597.237-1.17.659-1.587m0 0L20 4" />
+                            </svg>
+                            <span class="font-semibold">PROJECTION</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="text-center mb-12 fade-in">
-                    <h3 class="text-3xl font-bold mb-8">LATEST DONATIONS</h3>
-                    <div class="flex flex-wrap justify-center gap-6">
-                        <div class="flex flex-col items-center p-4">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jack Daniels"
-                                class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-yellow-400">
-                            <p class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl">Jack Daniels</p>
-                            <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $5,200
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center p-4">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Heather Church"
-                                class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-yellow-400">
-                            <p class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl">Heather Church</p>
-                            <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $400
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center p-4">
-                            <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Benjamin Jenner"
-                                class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-yellow-400">
-                            <p class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl ">Benjamin Jenner</p>
-                            <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $300
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center p-4">
-                            <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Vitalis Fisher"
-                                class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-yellow-400">
-                            <p class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl">Vitalis Fisher</p>
-                            <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $1,400
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center p-4">
-                            <div
-                                class="w-24 h-24 rounded-full mb-4 bg-gray-300 flex items-center justify-center text-gray-500 border-4 border-gray-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5.121 17.804A7.498 7.498 0 0112 15a7.498 7.498 0 016.879 2.804M12 12a3 3 0 100-6 3 3 0 000 6z" />
-                                </svg>
-                            </div>
-                            <p class="font-semibold text-lg text-gray-900 bg-yellow-100 bg-opacity-50 rounded-full px-3 shadow-2xl">Anonymous</p>
-                            <div class="bg-gray-200 text-gray-900 font-bold py-1 px-4 rounded-full mt-2">Donated: $1,000
-                            </div>
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="font-semibold">SUPPORT</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="px-4 "> <img src="img/donators.jpeg"
+                    class="rounded-lg bg-gray-900 bg-opacity-50 w-full shadow-lg fade-in" alt="hand-in-hand"></div>
+        </div>
+    </section>
 
-        <section id="help" class="bg-yellow-400 py-20 text-gray-900 animated-section">
-            <div class="container mx-auto md:px-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="slide-in-up ">
-                    <h2 class="text-4xl font-bold mb-8 px-4">HOW CAN YOU HELP?</h2>
-                    <div class="bg-gray-900 text-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4">HELP FOR CAUSE</h3>
-                        <p class="text-lg md:text-xl mb-10 text-gray-600">
-                            Every action — big or small — brings us closer to a world where children no longer suffer
-                            from
-                            the horrors of war. Your support can change a life.
-                        </p>
-
-                        <div class="grid md:grid-cols-3 gap-8 text-left">
-                            <!-- Donate -->
-                            <div class="bg-gray-100 p-4 md:p-2 rounded-lg shadow hover:shadow-md transition">
-                                <h3 class="text-2xl font-semibold mb-2 text-yellow-600">Make a Donation</h3>
-                                <p class="text-gray-800">Your financial support provides emergency food, shelter,
-                                    education,
-                                    and psychological
-                                    care to children in war zones.</p>
-                            </div>
-
-                            <!-- Volunteer -->
-                            <div class="bg-gray-100 p-4 md:p-2 rounded-lg shadow hover:shadow-md transition">
-                                <h3 class="text-2xl font-semibold mb-2 text-blue-600">Become a Volunteer</h3>
-                                <p class="text-gray-800">Whether online or on-ground, volunteers are the heart of our
-                                    mission — helping raise
-                                    awareness, organize events, or support logistics.</p>
-                            </div>
-
-                            <!-- Fundraise -->
-                            <div class="bg-gray-100 p-4 md:p-2 rounded-lg shadow hover:shadow-md transition">
-                                <h3 class="text-2xl font-semibold mb-2 text-green-600">Start a Fundraiser</h3>
-                                <p class="text-gray-800">Host a charity event, online campaign, or social media
-                                    challenge to
-                                    raise funds and
-                                    awareness for children in crisis.</p>
-                            </div>
-
-                        </div>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-10 text-center">
-                            <div class="flex flex-col items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                                </svg>
-                                <span class="font-semibold">MEDIA</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M17 20h5v-3m-1.5-11L12 10.5M5 20h5v-3M7.5 13.5l1.5-1.5m3-3L15 6l1.5 1.5M12 17a4 4 0 100-8 4 4 0 000 8z" />
-                                </svg>
-                                <span class="font-semibold">MOBILIZATION</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M9 12l2 2 4-4m5.618-4.013A.995.995 0 0121 12a9 9 0 11-18 0c0-.597.237-1.17.659-1.587m0 0L20 4" />
-                                </svg>
-                                <span class="font-semibold">PROJECTION</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span class="font-semibold">SUPPORT</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="px-4 "> <img src="img/donators.jpeg"
-                        class="rounded-lg bg-gray-900 bg-opacity-50 w-full shadow-lg fade-in" alt="hand-in-hand"></div>
+    <section id="donate" class="py-20 bg-gray-900 text-white animated-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">DONATE NOW</h2>
+                <p class="text-base">Giving is not just about making a donation, its MAKING A DIFFERENCE</p>
+                <p class="text-gray-400 text-lg">Choose a donation method to help the children.</p>
             </div>
-        </section>
 
-        <section id="donate" class="py-20 bg-gray-900 text-white animated-section">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4">DONATE NOW</h2>
-                    <p class="text-base">Giving is not just about making a donation, its MAKING A DIFFERENCE</p>
-                    <p class="text-gray-400 text-lg">Choose a donation method to help the children.</p>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-gray-800 p-8 rounded-lg shadow-2xl relative slide-in-up">
+                    <h3 class="text-3xl font-bold mb-6 text-yellow-400">Crypto</h3>
+                    <% wallets.forEach(function(wallet){ %>
+                        <div class="mb-8">
+                            <p class="text-gray-400 mb-4">Scan the QR code or copy the wallet address to donate.</p>
+                            <div class="bg-white p-4 rounded-lg flex justify-center mb-4">
+                                <img src="<%= wallet.crypto_qrcode %>" alt="Crypto QR Code" class="w-40 h-40">
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg text-sm break-all">
+                                <p class="font-bold text-yellow-400">Wallet Address <%= wallet.crypto_details %>
+                                        <%= wallet.crypto_network %>
+                                </p>
+                                <p class="text-gray-200">
+                                    <%= wallet.wallet_address %>
+                                </p>
+                            </div>
+                        </div>
+                        <% }); %>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-2xl relative slide-in-up">
-                        <h3 class="text-3xl font-bold mb-6 text-yellow-400">Crypto</h3>
-                        <% wallets.forEach(function(wallet){ %>
-                            <div class="mb-8">
-                                <p class="text-gray-400 mb-4">Scan the QR code or copy the wallet address to donate.</p>
-                                <div class="bg-white p-4 rounded-lg flex justify-center mb-4">
-                                    <img src="<%= wallet.crypto_qrcode %>" alt="Crypto QR Code" class="w-40 h-40">
+                            <form class="space-y-6" id="crypto" enctype="multipart/form-data">
+                                <div>
+                                    <label for="crypto_fullname" class="block text-sm font-semibold text-gray-300">Full
+                                        Name</label>
+                                    <input type="text" id="crypto_fullname" name="fullname"
+                                        class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                        required>
                                 </div>
-                                <div class="bg-gray-700 p-4 rounded-lg text-sm break-all">
-                                    <p class="font-bold text-yellow-400">Wallet Address <%= wallet.crypto_details %>
-                                            <%= wallet.crypto_network %>
-                                    </p>
-                                    <p class="text-gray-200">
-                                        <%= wallet.wallet_address %>
-                                    </p>
+                                <div>
+                                    <label for="crypto_email"
+                                        class="block text-sm font-semibold text-gray-300">Email</label>
+                                    <input type="email" id="crypto_email" name="email"
+                                        class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                        required>
                                 </div>
-                            </div>
-                            <% }); %>
+                                <div>
+                                    <label for="crypto_amount" class="block text-sm font-semibold text-gray-300">Amount
+                                        ($)</label>
+                                    <input type="number" id="crypto_amount" name="amount"
+                                        class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="crypto_receipt"
+                                        class="block text-sm font-semibold text-gray-300">Payment
+                                        Receipt</label>
+                                    <input type="file" id="crypto_receipt" name="payment_receipt" accept="image/*"
+                                        class="mt-1 block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100"
+                                        required>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded-md hover:bg-yellow-500 transition duration-300">Submit
+                                    Donation</button>
+                            </form>
+                </div>
 
-                                <form class="space-y-6" id="crypto" enctype="multipart/form-data">
-                                    <div>
-                                        <label for="crypto_fullname"
-                                            class="block text-sm font-semibold text-gray-300">Full
-                                            Name</label>
-                                        <input type="text" id="crypto_fullname" name="fullname"
-                                            class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                            required>
-                                    </div>
-                                    <div>
-                                        <label for="crypto_email"
-                                            class="block text-sm font-semibold text-gray-300">Email</label>
-                                        <input type="email" id="crypto_email" name="email"
-                                            class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                            required>
-                                    </div>
-                                    <div>
-                                        <label for="crypto_amount"
-                                            class="block text-sm font-semibold text-gray-300">Amount
-                                            ($)</label>
-                                        <input type="number" id="crypto_amount" name="amount"
-                                            class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                            required>
-                                    </div>
-                                    <div>
-                                        <label for="crypto_receipt"
-                                            class="block text-sm font-semibold text-gray-300">Payment
-                                            Receipt</label>
-                                        <input type="file" id="crypto_receipt" name="payment_receipt" accept="image/*"
-                                            class="mt-1 block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100"
-                                            required>
-                                    </div>
-                                    <button type="submit"
-                                        class="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded-md hover:bg-yellow-500 transition duration-300">Submit
-                                        Donation</button>
-                                </form>
-                    </div>
-
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-2xl relative slide-in-up">
-                        <h3 class="text-3xl font-bold mb-6 text-yellow-400">Gift Card</h3>
-                        <p class="text-gray-400 mb-6">Donate with gift card(s) - make a difference today.</p>
-                        <form class="space-y-6" id="gift-card" enctype="multipart/form-data">
-                            <div>
-                                <label for="giftcard_fullname" class="block text-sm font-semibold text-gray-300">Full
-                                    Name</label>
-                                <input type="text" id="giftcard_fullname" name="fullname"
-                                    class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                    required>
-                            </div>
-                            <div>
-                                <label for="giftcard_email"
-                                    class="block text-sm font-semibold text-gray-300">Email</label>
-                                <input type="email" id="giftcard_email" name="email"
-                                    class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                    required>
-                            </div>
-                            <div>
-                                <label for="giftcard_category" class="block text-sm font-semibold text-gray-300">Gift
-                                    Card
-                                    category
-                                </label>
-                                <p class="py-1 text-gray-500 text-xs">required: Apple/Itunes, Steam, Razer Gold.</p>
-                                <input type="text" id="giftcard_category" name="category"
-                                    class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                    required>
-                            </div>
-                            <div>
-                                <label for="giftcard_amount" class="block text-sm font-semibold text-gray-300">Gift Card
-                                    total
-                                    Value ($)</label>
-                                <input type="number" id="giftcard_amount" name="amount"
-                                    class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                    required>
-                            </div>
-                            <div>
-                                <label for="giftcard_code" class="block text-sm font-semibold text-gray-300">Gift Card
-                                    Code
-                                </label>
-                                <input type="text" id="giftcard_code" name="code"
-                                    class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                    required>
-                            </div>
-                            <div>
-                                <p class="text-xs text-gray-500 py-1">please ensure your gift-card code is visible and
-                                    properly scratched</p>
-                                <label for="giftcard_image" class="block text-sm font-semibold text-gray-300">Image of
-                                    Activated Gift Card(s)</label>
-                                <input type="file" id="giftcard_image" multiple name="payment_receipt" accept="image/*"
-                                    class="mt-1 block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100"
-                                    required>
-                            </div>
-                            <button type="submit"
-                                class="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded-md hover:bg-yellow-500 transition duration-300">Submit
-                                Donation</button>
-                        </form>
-                    </div>
-
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-2xl relative group slide-in-up">
-                        <h3 class="text-3xl font-bold mb-6 text-yellow-400">Bank Transfer</h3>
-                        <p class="text-gray-400 mb-6">You can also donate directly through a bank transfer.</p>
-                        <div class="space-y-6 opacity-30">
-                            <div>
-                                <label class="block text-sm font-semibold text-gray-300">Bank Name</label>
-                                <input type="text" value="Unavailable" disabled
-                                    class="mt-1 block w-full p-3 bg-gray-700 rounded-md text-gray-500">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold text-gray-300">Account Number</label>
-                                <input type="text" value="Unavailable" disabled
-                                    class="mt-1 block w-full p-3 bg-gray-700 rounded-md text-gray-500">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold text-gray-300">Account Name</label>
-                                <input type="text" value="Unavailable" disabled
-                                    class="mt-1 block w-full p-3 bg-gray-700 rounded-md text-gray-500">
-                            </div>
-                            <button disabled
-                                class="w-full bg-gray-600 cursor-not-allowed text-gray-400 font-bold py-3 rounded-md">Submit
-                                Donation</button>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-2xl relative slide-in-up">
+                    <h3 class="text-3xl font-bold mb-6 text-yellow-400">Gift Card</h3>
+                    <p class="text-gray-400 mb-6">Donate with gift card(s) - make a difference today.</p>
+                    <form class="space-y-6" id="gift-card" enctype="multipart/form-data">
+                        <div>
+                            <label for="giftcard_fullname" class="block text-sm font-semibold text-gray-300">Full
+                                Name</label>
+                            <input type="text" id="giftcard_fullname" name="fullname"
+                                class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                required>
                         </div>
-                        <div class="donation-form-overlay">
-                            <p class="md:text-2xl font-bold px-4 text-xl">Banks are unavailable at the moment.</p>
+                        <div>
+                            <label for="giftcard_email" class="block text-sm font-semibold text-gray-300">Email</label>
+                            <input type="email" id="giftcard_email" name="email"
+                                class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                required>
                         </div>
+                        <div>
+                            <label for="giftcard_category" class="block text-sm font-semibold text-gray-300">Gift
+                                Card
+                                category
+                            </label>
+                            <p class="py-1 text-gray-500 text-xs">required: Apple/Itunes, Steam, Razer Gold.</p>
+                            <input type="text" id="giftcard_category" name="category"
+                                class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                required>
+                        </div>
+                        <div>
+                            <label for="giftcard_amount" class="block text-sm font-semibold text-gray-300">Gift Card
+                                total
+                                Value ($)</label>
+                            <input type="number" id="giftcard_amount" name="amount"
+                                class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                required>
+                        </div>
+                        <div>
+                            <label for="giftcard_code" class="block text-sm font-semibold text-gray-300">Gift Card
+                                Code
+                            </label>
+                            <input type="text" id="giftcard_code" name="code"
+                                class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                required>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 py-1">please ensure your gift-card code is visible and
+                                properly scratched</p>
+                            <label for="giftcard_image" class="block text-sm font-semibold text-gray-300">Image of
+                                Activated Gift Card(s)</label>
+                            <input type="file" id="giftcard_image" multiple name="payment_receipt" accept="image/*"
+                                class="mt-1 block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100"
+                                required>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded-md hover:bg-yellow-500 transition duration-300">Submit
+                            Donation</button>
+                    </form>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-lg shadow-2xl relative group slide-in-up">
+                    <h3 class="text-3xl font-bold mb-6 text-yellow-400">Bank Transfer</h3>
+                    <p class="text-gray-400 mb-6">You can also donate directly through a bank transfer.</p>
+                    <div class="space-y-6 opacity-30">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300">Bank Name</label>
+                            <input type="text" value="Unavailable" disabled
+                                class="mt-1 block w-full p-3 bg-gray-700 rounded-md text-gray-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300">Account Number</label>
+                            <input type="text" value="Unavailable" disabled
+                                class="mt-1 block w-full p-3 bg-gray-700 rounded-md text-gray-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300">Account Name</label>
+                            <input type="text" value="Unavailable" disabled
+                                class="mt-1 block w-full p-3 bg-gray-700 rounded-md text-gray-500">
+                        </div>
+                        <button disabled
+                            class="w-full bg-gray-600 cursor-not-allowed text-gray-400 font-bold py-3 rounded-md">Submit
+                            Donation</button>
+                    </div>
+                    <div class="donation-form-overlay">
+                        <p class="md:text-2xl font-bold px-4 text-xl">Banks are unavailable at the moment.</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
     <%- include('partials/footer') %>
