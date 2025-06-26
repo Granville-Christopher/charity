@@ -1,0 +1,85 @@
+<footer class="bg-gray-950 text-white py-16">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="fade-in">
+            <h3 class="text-xl md:text-2xl font-bold mb-6">ABOUT US</h3>
+            <p class="text-sm md:text-xl leading-relaxed mb-4">
+                We are a humanitarian organization committed to restoring hope and dignity to children affected by
+                war, conflict, and crisis. From the streets of Ukraine to under-resourced communities around the
+                world, our mission is to ensure that every child feels safe, supported, and seen.
+            </p>
+            <p class="text-sm md:text-xl leading-relaxed mb-4">
+                We exist to bring light to the lives of children living through the darkness of war. Our team works
+                across borders to deliver aid, comfort, and hope to the youngest victims of conflict. Because no
+                child should have to grow up in fear.
+            </p>
+            <p class="text-sm md:text-xl leading-relaxed">
+                Through emergency relief, education, psychological support, and community rebuilding, we work
+                hand-in-hand with local partners to meet immediate needs and create long-term solutions. Every
+                donation we receive helps provide shelter, food, medical care, and emotional healing to children who
+                need it most.
+            </p>
+        </div>
+
+
+
+        <div class="fade-in">
+            <h3 class="text-xl md:text-2xl font-bold mb-6">LEAVE US A MESSAGE</h3>
+            <form class="space-y-6" id="leave-a-message" enctype="multipart/form-data">
+                <div>
+                    <input type="text" name="name" placeholder="Name"
+                        class="w-full p-4 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="E-Mail"
+                        class="w-full p-4 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div>
+                    <textarea placeholder="Message" name="message" rows="4"
+                        class="w-full p-4 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <input type="text" name="security_code" placeholder="Type the code from the image below"
+                        class="flex-grow p-4 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    <div class="bg-gray-700 p-2 rounded-md font-bold text-lg tracking-widest">X D P F</div>
+                </div>
+                <button type="submit"
+                    class="bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-md hover:bg-yellow-500 transition duration-300">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-6 mt-16">
+        <div class="bg-yellow-400 p-8 rounded-lg flex flex-col md:flex-row items-center justify-between gap-6 fade-in">
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-900 mr-4" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                    <h4 class="font-bold text-lg md:text-xl text-gray-900">NEWSLETTER SIGN-UP</h4>
+                    <p class="text-gray-700">Signup to our news letter to recieve updates on donations</p>
+                </div>
+            </div>
+            <form class="flex flex-col sm:flex-row gap-4 w-full md:w-auto" id="newsletter" enctype="multipart/form-data">
+                <input type="email" name="email" placeholder="Email Address"
+                    class="p-3 rounded-md flex-grow focus:outline-none focus:ring-2 focus:ring-gray-900" required>
+                <input type="text" name="firstname" placeholder="First Name"
+                    class="p-3 rounded-md flex-grow focus:outline-none focus:ring-2 focus:ring-gray-900" required>
+                <button type="submit"
+                    class="bg-gray-900 text-yellow-400 font-bold py-3 px-6 rounded-md hover:bg-gray-800 transition duration-300">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="text-center text-gray-500 mt-12 text-sm">
+            Copyright © 2025 - <span class="text-yellow-400">Save The Children</span>
+        </div>
+
+    </div>
+</footer>
+
+<script src="/js/index.js"></script>
+<script src="/js/forms.js"></script>
+</body>
+
+</html>

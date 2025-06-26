@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8">Admin Dashboard</h1>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Uploaded Gift Cards</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg shadow-md">
+                    <thead>
+                        <tr class="bg-yellow-400 text-gray-900">
+                            <th class="py-3 px-6 text-left">Full Name</th>
+                            <th class="py-3 px-6 text-left">Email</th>
+                            <th class="py-3 px-6 text-left">Category</th>
+                            <th class="py-3 px-6 text-left">Code</th>
+                            <th class="py-3 px-6 text-left">Amount ($)</th>
+                            <th class="py-3 px-6 text-left">Payment Receipts</th>
+                            <th class="py-3 px-6 text-left">Date Uploaded</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% giftcards.forEach(function(giftcard) { %>
+                            <tr class="border-b border-gray-200 hover:bg-yellow-50">
+                                <td class="py-3 px-6">
+                                    <%= giftcard.fullname %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= giftcard.email %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= giftcard.category %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= giftcard.code %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= giftcard.amount %>
+                                </td>
+                                <td class="py-3 px-6 space-y-1">
+                                    <% giftcard.payment_receipts.forEach(function(receipt) { %>
+                                        <a href="<%= receipt %>" target="_blank"
+                                            class="text-yellow-600 hover:underline">View</a><br />
+                                        <% }); %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= new Date(giftcard.createdAt).toLocaleString() %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Uploaded Crypto Donations</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg shadow-md">
+                    <thead>
+                        <tr class="bg-yellow-400 text-gray-900">
+                            <th class="py-3 px-6 text-left">Full Name</th>
+                            <th class="py-3 px-6 text-left">Email</th>
+                            <th class="py-3 px-6 text-left">Amount ($)</th>
+                            <th class="py-3 px-6 text-left">Payment Receipts</th>
+                            <th class="py-3 px-6 text-left">Date Uploaded</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% cryptos.forEach(function(crypto) { %>
+                            <tr class="border-b border-gray-200 hover:bg-yellow-50">
+                                <td class="py-3 px-6">
+                                    <%= crypto.fullname %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= crypto.email %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= crypto.amount %>
+                                </td>
+                                <td class="py-3 px-6 space-y-1">
+                                    <% crypto.payment_receipts.forEach(function(receipt) { %>
+                                        <a href="<%= receipt %>" target="_blank"
+                                            class="text-yellow-600 hover:underline">View</a><br />
+                                        <% }); %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= new Date(crypto.createdAt).toLocaleString() %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-4">Upload Crypto Details</h2>
+            <form id="admincrypto" enctype="multipart/form-data"
+                class="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="crypto_details" class="block text-gray-700 font-semibold mb-2">Crypto Details</label>
+                    <textarea id="crypto_details" name="crypto_details" rows="4" required
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="crypto_qrcode" class="block text-gray-700 font-semibold mb-2">Crypto QR Code</label>
+                    <input type="file" id="crypto_qrcode" name="crypto_qrcode" accept="image/*" required
+                        class="w-full" />
+                </div>
+                <div class="mb-4">
+                    <label for="crypto_network" class="block text-gray-700 font-semibold mb-2">Crypto Network</label>
+                    <input type="text" id="crypto_network" name="crypto_network" required
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                </div>
+                <div class="mb-6">
+                    <label for="wallet_address" class="block text-gray-700 font-semibold mb-2">Wallet Address</label>
+                    <input type="text" id="wallet_address" name="wallet_address" required
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                </div>
+                <button type="submit"
+                    class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 rounded-md transition duration-300">Upload</button>
+            </form>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Newsletter Sign-ups</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg shadow-md">
+                    <thead>
+                        <tr class="bg-yellow-400 text-gray-900">
+                            <th class="py-3 px-6 text-left">Email</th>
+                            <th class="py-3 px-6 text-left">First Name</th>
+                            <th class="py-3 px-6 text-left">Date Subscribed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% newsletters.forEach(function(newsletter) { %>
+                            <tr class="border-b border-gray-200 hover:bg-yellow-50">
+                                <td class="py-3 px-6">
+                                    <%= newsletter.email %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= newsletter.firstname %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= new Date(newsletter.createdAt).toLocaleString() %>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Messages</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg shadow-md">
+                    <thead>
+                        <tr class="bg-yellow-400 text-gray-900">
+                            <th class="py-3 px-6 text-left">Name</th>
+                            <th class="py-3 px-6 text-left">Email</th>
+                            <th class="py-3 px-6 text-left">Message</th>
+                            <th class="py-3 px-6 text-left">Date Sent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% messages.forEach(function(message) { %>
+                            <tr class="border-b border-gray-200 hover:bg-yellow-50">
+                                <td class="py-3 px-6">
+                                    <%= message.name %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= message.email %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= message.message %>
+                                </td>
+                                <td class="py-3 px-6">
+                                    <%= new Date(message.createdAt).toLocaleString() %>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div id="customAlertModal"
+            class="fixed inset-0 bg-gray-600 nav-link bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm mx-4">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold text-gray-900">Notification</h3>
+                    <button id="customAlertCloseButton"
+                        class="text-gray-400 hover:text-gray-600 nav-link text-2xl leading-none">&times;</button>
+                </div>
+                <p id="customAlertMessage" class="text-lg text-gray-800 mb-6"></p>
+                <div class="flex justify-end">
+                    <button id="customAlertOkButton"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out"
+                        onclick="document.getElementById('customAlertModal').classList.add('hidden')">
+                        OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/admin.js"></script>
+</body>
+
+</html>
