@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form1.addEventListener("submit", async function (e) {
       e.preventDefault();
 
-      const formData = new FormData(form);
+      const formData = new FormData(form1); // ✅ Correct form reference
 
       try {
         const response = await fetch("/admin/upload-crypto-details", {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showAlert(result.message || "Upload successful", "success");
 
         if (result.success) {
-          form.reset();
+          form1.reset();
         }
       } catch (error) {
         console.error("❌ Submission failed:", error);
@@ -110,7 +110,6 @@ form.addEventListener("submit", async function (e) {
     console.error("❌ Error:", error);
     showAlert("An error occurred: " + error.message);
   }
-
 
   // function showAlert(message, type) {
   //   alert(message);
