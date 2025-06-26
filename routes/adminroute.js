@@ -61,7 +61,7 @@ router.post(
 
       res.status(200).json({
         success: true,
-        message: "Thank you for your donation!",
+        message: "Details Uploaded Successfully!",
       });
     } catch (err) {
       console.error("❌ Upload error:", err);
