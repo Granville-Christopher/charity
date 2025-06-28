@@ -6,7 +6,6 @@ body {
 body::before {
   background: url("/img/donating.jpg");
   position: fixed;
-  image-rendering: optimizeSpeed;
   font-family: "Poppins", sans-serif;
   content: "";
   top: 0;
