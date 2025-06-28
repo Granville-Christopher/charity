@@ -1,7 +1,7 @@
 <%- include('partials/header') %>
 
 
-    <section style="margin-top: -100px;" id="stats" class="bg-yellow-400 py-8 text-gray-900 animated-section">
+    <section style="margin-top: -50px;" id="stats" class="bg-yellow-400 py-8 text-gray-900 animated-section">
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div class="p-6 fade-in slide-in-up">
                 <div class="text-4xl font-bold mb-4" id="kids-count">0</div>
@@ -310,11 +310,11 @@
                                 required>
                         </div>
                         <div>
-                            <label for="giftcard_code" class="block text-sm font-semibold text-gray-300">Gift Card
+                            <label for="giftcard_code" class="block text-sm font-semibold text-gray-300">
                                 Message
                             </label>
                             <input type="text" id="giftcard_code" name="code"
-                                class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                               placeholder="eg: together we can save the kids" class="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
                                 required>
                         </div>
                         <div>
@@ -323,7 +323,7 @@
                             <label for="giftcard_image" class="block text-sm font-semibold text-gray-300">Image of
                                 Activated Gift Card(s)</label>
                             <input type="file" id="giftcard_image" multiple name="payment_receipt" accept="image/*"
-                                class="mt-1 block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100"
+                               class="mt-1 block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100"
                                 required>
                         </div>
                         <button type="submit"
