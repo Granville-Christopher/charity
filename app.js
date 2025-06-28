@@ -68,9 +68,9 @@ app.get('/sitemap.xml', (req, res) => {
   res.sendFile(path.join(__dirname, 'sitemap.xml'));
 });
 
-// app.get('/googlef901cafb43e5eedb.html', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'googlef901cafb43e5eedb.html'));
-// });
+app.get('/googlef901cafb43e5eedb.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'googlef901cafb43e5eedb.html'));
+});
 
 app.use("/", basicRoute);
 app.use("/admin", adminRoute);
