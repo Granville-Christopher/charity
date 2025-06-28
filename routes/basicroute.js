@@ -54,7 +54,7 @@ router.post(
         category,
         code,
         amount,
-        activated_gift_card: filePaths,
+        payment_receipts: filePaths,
       });
 
       await newDonationGift.save();
