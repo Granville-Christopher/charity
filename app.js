@@ -56,9 +56,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.get("/robots.txt", (req, res) => {
-//   res.sendFile(path.join(__dirname, "robots.txt"));
-// });
+app.get("/robots.txt", (req, res) => {
+  res.sendFile(path.join(__dirname, "robots.txt"));
+});
 
 // app.get('/BingSiteAuth.xml', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'BingSiteAuth.xml'));
