@@ -31,23 +31,40 @@ document
   .getElementById("crypto")
   .addEventListener("submit", async function (e) {
     e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
+
+    const form1 = e.target;
+    const submitBtn = form1.querySelector("button[type='submit']");
+    const originalText = submitBtn.innerHTML;
+
+    // 🔄 Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "Please wait...";
+
+    const formData = new FormData(form1);
+
     try {
       const response = await fetch("/donate/crypto", {
         method: "POST",
         body: formData,
       });
 
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        const text = await response.text();
+        throw new Error("Server returned non-JSON response:\n" + text);
+      }
+
       const result = await response.json();
       showAlert(result.message || "Thank you for your donation", "success");
-      if (result.success) form.reset();
+
+      if (result.success) form1.reset();
     } catch (error) {
-      console.error(error);
-      showAlert(
-        data.error || "An error occurred while submitting the donation",
-        "error"
-      );
+      console.error("❌ Submission failed:", error);
+      showAlert("An error occurred: " + error.message, "error");
+    } finally {
+      // ✅ Restore button
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
     }
   });
 
@@ -56,8 +73,15 @@ document
   .addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    const form = e.target;
-    const formData = new FormData(form);
+    const form2 = e.target;
+    const submitBtn = form2.querySelector("button[type='submit']");
+    const originalText = submitBtn.innerHTML;
+
+    // 🔄 Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "Please wait...";
+
+    const formData = new FormData(form2);
 
     try {
       const response = await fetch("/donate/giftcard", {
@@ -75,11 +99,15 @@ document
       showAlert(result.message || "Thank you for your donation!", "success");
 
       if (result.success) {
-        form.reset();
+        form2.reset();
       }
     } catch (error) {
       console.error("❌ Submission failed:", error);
       showAlert("An error occurred: " + error.message, "error");
+    } finally {
+      // ✅ Restore button
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
     }
   });
 

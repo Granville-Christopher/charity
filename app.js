@@ -47,7 +47,6 @@ app.use((req, res, next) => {
   next();
 });
 
-
 app.use((req, res, next) => {
   if (req.headers.host && req.headers.host.startsWith("www.")) {
     const newHost = req.headers.host.replace("www.", "");
@@ -64,16 +63,35 @@ app.get("/robots.txt", (req, res) => {
 //   res.sendFile(path.join(__dirname, 'BingSiteAuth.xml'));
 // });
 
-app.get('/sitemap.xml', (req, res) => {
-  res.sendFile(path.join(__dirname, 'sitemap.xml'));
+app.get("/sitemap.xml", (req, res) => {
+  res.sendFile(path.join(__dirname, "sitemap.xml"));
 });
 
-app.get('/googlef901cafb43e5eedb.html', (req, res) => {
-  res.sendFile(path.join(__dirname, 'googlef901cafb43e5eedb.html'));
+app.get("/googlef901cafb43e5eedb.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "googlef901cafb43e5eedb.html"));
 });
 
 app.use("/", basicRoute);
 app.use("/admin", adminRoute);
+
+// ⚠️ MUST BE AFTER all your routes
+app.use((err, req, res, next) => {
+  if (err.name === "MulterError") {
+    console.error("🧨 Multer error:", err);
+    return res.status(400).json({
+      success: false,
+      message: "Multer upload error",
+      error: err.message,
+    });
+  }
+
+  console.error("🔥 Unexpected error:", err);
+  res.status(500).json({
+    success: false,
+    message: "Unexpected server error",
+    error: err.message || "Something went wrong.",
+  });
+});
 
 app.use((req, res, next) => {
   res.status(404).render("404", { title: "404" });
